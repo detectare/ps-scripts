@@ -5,13 +5,12 @@ Write-Host @"
 "@ -ForegroundColor Red
 Write-Host ""
 Write-Host "Made by @detectare" -ForegroundColor Blue -NoNewline
-Write-Host -ForegroundColor Red "discord.gg/redlotus"
 
 Write-Host ""
 function Test-Admin {;$currentUser = New-Object Security.Principal.WindowsPrincipal $([Security.Principal.WindowsIdentity]::GetCurrent());$currentUser.IsInRole([Security.Principal.WindowsBuiltinRole]::Administrator);}
 if (!(Test-Admin)) {
 	Write-Host ""
-    Write-Warning "Run this script with admin."
+    Write-Warning "Avvia da amministratore."
     Start-Sleep 10
     Exit
 }
